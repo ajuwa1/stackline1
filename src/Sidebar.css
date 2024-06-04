@@ -1,0 +1,30 @@
+.sidebar {
+    height: calc(100vh - 64px);
+    width: 200px;
+    background-color: #ffffff;
+    display: flex;
+    flex-direction: column; 
+    justify-content: flex-start;
+}
+
+.sidebar-logo-container {
+    margin-top: 20px; 
+}
+
+.sidebar-logo {
+    max-width: 100%;
+    max-height: 100%;
+}
+
+.tag-container {
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.tag-box {
+    background-color: #f2f2f2;
+    padding: 5px 10px;
+    margin-right: 10px;
+    margin-bottom: 10px;
+    border-radius: 5px;
+}
