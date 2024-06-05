@@ -3,17 +3,21 @@ import Navbar from './Navbar';
 import './App.css';
 import Sidebar from './SIdebar';
 import productData from './productData.json'
+import { useDispatch, useSelector } from 'react-redux';
+import { setSortOption } from './actions';
 
 function App() {
-  const [sortOption, setSortOption] = useState('newest');
 
-  const handleSortChange = (e) => {
-    setSortOption(e.target.value);
+  const sortOption = useSelector((state) => state.sortOption);
+  const dispatch = useDispatch();
+
+    const handleSortChange = (e) => {
+    dispatch(setSortOption(e.target.value));
   }
 
   const handleDropDownClick = () => {
     const newSortOption = sortOption === '' ? 'newest' : '';
-    setSortOption(newSortOption);
+    dispatch(setSortOption(newSortOption));
   }
 
   const sortedSales = [...productData[0].sales].sort((a, b) => {
