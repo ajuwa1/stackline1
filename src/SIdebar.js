@@ -8,7 +8,7 @@ const Sidebar = () => {
         <div className="sidebar">
             <img src = {product.image} alt = 'Sidebar Logo' className = 'sidebar-logo' />
             <div className="product-details">
-                <h2>{product.title}</h2>
+                <h3>{product.title}</h3>
                 <p>{product.subtitle}</p>
                 <ul>
                     {product.tags.map((tag,index) => (

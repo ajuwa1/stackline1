@@ -6,34 +6,45 @@ import productData from './productData.json'
 
 function App() {
   return (
-    <div className='App'>
-      <Navbar />
+    <>
+    <Navbar />
+    <div className='app-container'>
+      
+       <main className='main-content'>
       <Sidebar />
-      <main className='main-content'>
+      <div className='table-container'>
         <table>
           <thead>
             <tr>
-              <th>Week Ending</th>
-              <th>Retail Sales</th>
-              <th>Wholesale Sales</th>
-              <th>Units Sold</th>
-              <th>Retailer Margin</th>
+              <th>WEEK ENDING</th>
+              <th>RETAIL SALES</th>
+              <th>WHOLESALE SALES</th>
+              <th>UNITS SOLD</th>
+              <th>RETAILER MARGIN</th>
             </tr>
           </thead>
           <tbody>
-            {productData[0].sales.map((sale, index) => (
-            <tr key = {index}>
-              <td>{sale.weekEnding}</td>
-              <td>{sale.retailSales}</td>
-              <td>{sale.wholesaleSales}</td>
-              <td>{sale.unitsSold}</td>
-              <td>{sale.retailerMargin}</td>
+            {productData[0].sales.map((sale, index) => {
+              
+              const date = new Date(sale.weekEnding);
+              const formattedDate = `${date.getMonth() + 1}-${date.getDate()}-${date.getFullYear()}`
+            return (
+              <tr key = {index}>
+              <td className='centered'>{formattedDate}</td>
+              <td className='centered'>${sale.retailSales}</td>
+              <td className='centered'>${sale.wholesaleSales}</td>
+              <td className='centered'>{sale.unitsSold}</td>
+              <td className='centered'>${sale.retailerMargin}</td>
             </tr>
-            ))}
+            );
+            
+            })};
           </tbody>
         </table>
+        </div>
       </main>
     </div>
+    </>
   );
 }
 

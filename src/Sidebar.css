@@ -1,11 +1,50 @@
 .sidebar {
-    height: calc(100vh - 64px);
-    width: 200px;
-    background-color: #ffffff;
+    width: 20%;
+    padding: 20px;
+    text-align: center;
+    border: 0px solid #ccc; /* Border around the sidebar */
+    border-radius: 0px; /* Rounded corners for the box */
+    background-color: #f9f9f9; /* Background color for the box */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Box shadow for a 3D effect */
+    margin: 20px; /* Margin to separate the sidebar from other elements */
+  }
+  
+  .sidebar-logo {
+    max-width: 100%;
+    height: auto;
+    margin-bottom: 20px;
+  }
+  
+  .product-details {
+    text-align: left;
+  }
+  
+  .product-details h3 {
+    margin: 10px 0;
+  }
+  
+  .product-details p {
+    margin: 10px 0;
+    opacity: 0.7; /* Opaque subtitle */
+    font-size: 14px; /* Smaller font size for subtitle */
+  }
+  
+  .product-details ul {
+    list-style: none;
+    padding: 0;
     display: flex;
-    flex-direction: column; 
-    justify-content: flex-start;
-}
+    flex-wrap: wrap;
+  }
+  
+  .product-details .tag-box {
+    background: rgba(0, 0, 0, 0.1); /* Transparent background */
+    padding: 5px 10px;
+    margin: 5px;
+    border-radius: 5px;
+    font-size: 12px; /* Smaller font size for tags */
+    font-family: Arial, sans-serif; /* Change the font family if needed */
+  }
+  
 
 .sidebar-logo-container {
     margin-top: 20px; 
@@ -13,18 +52,50 @@
 
 .sidebar-logo {
     max-width: 100%;
-    max-height: 100%;
+    height: auto;
+    margin-bottom: 20px;
+  }
+
+.product-details {
+    text-align: center;
+}
+
+.product-details p {
+    margin: 10px 0;
+    opacity: 0.7; 
+    font-size: 14px;
+    font-family: system-ui, sans-serif;
+    font-weight: normal; 
+}
+
+.product-details h3 {
+    margin: 10px 0;
+    font-family: system-ui, sans-serif;
+    font-weight: normal;
+    font-family: system-ui, sans-serif;
+    font-weight: normal;    
+}
+
+.subtitle {
+    font-size: smaller;
+    opacity: 0.5;
+    font-family: system-ui, sans-serif;
+    font-weight: normal;    
 }
 
 .tag-container {
     display: flex;
     flex-wrap: wrap;
+    font-family: system-ui, sans-serif;
+    font-weight: normal;    
 }
 
 .tag-box {
-    background-color: #f2f2f2;
+    background-color: rgba(0, 0, 0, 0.1);
+    display: inline-block;
     padding: 5px 10px;
-    margin-right: 10px;
-    margin-bottom: 10px;
-    border-radius: 5px;
+    margin: 3px;
+    border-radius: 3px;
+    font-family: system-ui, sans-serif;
+    font-weight: normal;
 }
