@@ -1,4 +1,4 @@
-/* App.css */
+
 .app-container {
   display: flex;
 }
@@ -16,8 +16,8 @@
   flex: 1;
   padding: 20px;
   overflow: auto;
-  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Box shadow for a 3D effect */
-  margin: 20px; /* Margin to separate the sidebar from other elements */
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); 
+  margin: 20px; 
   font-family: Avenir, Montserrat, Corbel, 'URW Gothic', source-sans-pro, sans-serif;
   font-weight: normal;
 }
@@ -48,3 +48,15 @@ tr:hover {
 .centered {
   text-align: center;
 }
+
+.week-ending-header {
+  display: inline-block;
+  vertical-align: middle;
+  margin-right: 10px;
+}
+
+.sort-option {
+  display: inline-block;
+  vertical-align: middle;
+}
+
